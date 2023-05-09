@@ -1,4 +1,4 @@
-enum DeviceType{
+enum DeviceTypeNew {
   Mobile,
   Tablet,
   Desktop

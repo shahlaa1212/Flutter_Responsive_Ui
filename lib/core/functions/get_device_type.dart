@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import '../core/enumbs/device_type.dart';
+import '../enums/device_type_new.dart';
 
-DeviceType getDeviceType(MediaQueryData mediaQueryData){
+DeviceTypeNew getDeviceType(MediaQueryData mediaQueryData) {
   Orientation orientation = mediaQueryData.orientation;
   double width = 0;
   if(orientation == Orientation.landscape){
@@ -10,10 +10,10 @@ DeviceType getDeviceType(MediaQueryData mediaQueryData){
     width = mediaQueryData.size.width;
   }
   if(width >= 950){
-    return DeviceType.Desktop;
+    return DeviceTypeNew.Desktop;
   }
-  if(width>=600){
-    return DeviceType.Tablet;
+  if(width >= 600){
+    return DeviceTypeNew.Tablet;
   }
-  return DeviceType.Mobile;
+  return DeviceTypeNew.Mobile;
 }
